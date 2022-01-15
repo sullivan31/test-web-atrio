@@ -6,6 +6,10 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
 public class MySqlConnection {
 	 private static Connection instance;
 
@@ -26,9 +30,9 @@ public class MySqlConnection {
 	            //datas.load(inStream);
 	            String host = "localhost";
 	            String port = "3306";
-	            String database = "test";
-	            String login = "toto";
-	            String pwd = "tata";
+	            String database = "annuaire";
+	            String login = "admin";
+	            String pwd = "admin12345";
 	            String url = "jdbc:mysql://" + host + ":" + port + "/" + database + "?useSSL=false";
 	            try {
 	                Class.forName("com.mysql.jdbc.Driver");
